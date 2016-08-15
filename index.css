@@ -1,0 +1,37 @@
+form.todo {
+  border-radius: 10px;
+  border: 2px solid #000000;
+  width: 250px;
+  height: 190px;
+}
+
+input {
+  padding: 20px;
+  align: center;
+}
+
+button {
+  align-self: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+ul {
+list-style-type: none;
+}
+ul.list {
+  font-size: 20px;
+  margin: 5px;
+  padding: 5px;
+  border: 2px solid #000000;
+  width: 250px;
+  height: 150px;
+}
+div.todo {
+  border: 2px solid #000000;
+  border-radius: 10px;
+  width: 250px;
+  height: 150px;
+  margin: 10px;
+  padding: 30px;
+}
