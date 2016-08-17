@@ -27,7 +27,7 @@ ul.list {
   width: 250px;
   height: 150px;
 }
-div.container {
+div.todoList {
   border: 2px solid #000000;
   border-radius: 10px;
   width: 250px;

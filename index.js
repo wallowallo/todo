@@ -13,18 +13,19 @@ function createTodo() {
 function buildTodoListItemDiv(title, description) {
   var newDiv = document.createElement("div");
   newDiv.className = "todoList"
+  newDiv.id = new Date().getTime()
   newDiv.innerHTML = title + "<br>" + description;
   return newDiv;
 }
-
+// function buildWhailingCaverns(players)
 // var input1 = document.querySelector(".title");
 // var input2 = document.querySelector(".description");
 // var todoList = [
 //                 { title: "Hit the gym!", description: "Lift Stuff to get gains." },
-//                 { title: "Eat vitamins", description: "Find some vitamins to eat, fool!" }
+//                 { title: "Eat vitamins", description: "Find some vitamins to eat!" }
 //               ]
 //
-// 
+//
 // function createTodo() {
 //   var newTodo = { title: "", description: "" }
 //   var text1 = input1.value;
