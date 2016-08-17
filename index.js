@@ -1,22 +1,49 @@
 var input1 = document.querySelector(".title");
 var input2 = document.querySelector(".description");
 
-function createTodo() {
-  var newDiv = buildTodoListItemDiv(input1.value, input2.value);
-  document.body.appendChild(newDiv);
+var reset = () => {
+  input1.value = "";
+  input2.value = "";
 }
+function formIsValid() {
+  return input1.value !== "" || input2.value !== "";
+}
+
+function createTodo() {
+  if (formIsValid()) {
+    var newDiv = buildTodoListItemDiv(input1.value, input2.value);
+    document.body.appendChild(newDiv);
+    reset();
+  }
+}
+
+
 
 /*
  * buildTodoListItemDiv
  * respoinsible for creating a div to be used as a todo list item
  */
+
 function buildTodoListItemDiv(title, description) {
   var newDiv = document.createElement("div");
   newDiv.className = "todoList"
   newDiv.id = new Date().getTime()
   newDiv.innerHTML = title + "<br>" + description;
+  var deleteButton = buildButton();
+  deleteButton.addEventListener("click",() => document.body.removeChild(newDiv));
+  newDiv.appendChild(deleteButton);
   return newDiv;
 }
+
+function buildButton() {
+  var newButton = document.createElement("input");
+       newButton.type = "button";
+       newButton.className = "removeTodo"
+       newButton.value = "X"
+       return newButton;
+}
+
+
 // function buildWhailingCaverns(players)
 // var input1 = document.querySelector(".title");
 // var input2 = document.querySelector(".description");
